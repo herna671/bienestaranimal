@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Próximamente</title>
+    <style>
+        /* General reset for margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fading background effect */
+        body {
+            background: linear-gradient(135deg, #66BB6A, #FFCC80);
+            background-size: 400% 400%;
+            animation: fadeBg 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes fadeBg {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Centered text styling */
+        .content {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Próximamente</h1>
+        <p>Toda la información de bienestar animal en Latinoamérica y Colombia</p>
+    </div>
+</body>
+</html>
