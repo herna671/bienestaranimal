@@ -1,123 +1,287 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Próximamente</title>
-    <style>
-        /* General reset for margins and paddings */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bienestar Animal Latinoamérica</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-        /* Fading background effect */
-        body {
-            background: linear-gradient(135deg, #66BB6A, #f39f02);
-            background-size: 400% 400%;
-            animation: fadeBg 8s ease infinite;
-        }
+    /* NAVBAR */
+    nav {
+      background-color: #004d40;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        @keyframes fadeBg {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+    nav .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
 
-        /* Centered text styling */
-        .content {
-            height: 100vh; /* Make it take up the full viewport height */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
 
-        .content h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+    .nav-toggle span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
 
-        .content p {
-            font-size: 1.5rem;
-        }
+    ul.nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-        /* Footer styling */
-        footer {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            text-align: center;
-            padding: 50px 0;
-        }
+    ul.nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-        footer form {
-            margin-bottom: 15px;
-        }
+    ul.nav-links li a:hover {
+      color: #ffd600;
+    }
 
-        footer input[type="email"] {
-            padding: 10px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
 
-        footer input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 1rem;
-            background-color: #66BB6A;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
 
-        footer p {
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-    </style>
+    .hero-content {
+      z-index: 1;
+      max-width: 90%;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #009688;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* Noticias Section */
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .news-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .news-card {
+      background: #f1f1f1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+      text-align: left;
+      transition: transform 0.2s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .news-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .news-card h3 {
+      margin: 15px;
+      color: #004d40;
+    }
+
+    .news-card p {
+      margin: 0 15px 15px;
+    }
+
+    .news-card .btn {
+      display: inline-block;
+      margin: 0 15px 20px;
+      background-color: #009688;
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .footer .social a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer .social a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+      }
+
+      ul.nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 15px;
+      }
+
+      ul.nav-links.active {
+        display: flex;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Main Content Section -->
-    <section class="content">
-        <div>
-            <h1>Próximamente</h1>
-            <br>
-            <p>Toda la información de bienestar animal en Colombia y Latinoamérica en un solo lugar</p>
-        </div>
-    </section>
 
-    <!-- Scroll Down to Footer Section -->
-    <footer>
-        <h2>Suscribirse</h2>
-        <p>Inscríbete para ser el primero en saber acerca de nuestros eventos de lanzamiento.</p>
-        <br>
-        <form action="#" method="post">
-            <input type="email" name="email" placeholder="Correo electrónico" required>
-            <input type="submit" value="Regístrate">
-        </form>
-        <p>Copyright © 2024 bienestaranimal.co - Todos los derechos reservados.</p>
-    </footer>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Bienestar Animal</div>
+    <div class="nav-toggle" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#noticias">Noticias</a></li>
+      <li><a href="#investigacion">Investigación</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <video autoplay muted loop>
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
+    <div class="hero-content">
+      <h1>Bienestar Animal Latinoamérica</h1>
+      <p>Promoviendo el bienestar y la ciencia animal en la región</p>
+      <a href="#contacto" class="btn">Contáctanos</a>
+    </div>
+  </header>
+
+  <!-- Noticias Section -->
+  <section id="noticias" class="section" style="background-color: #ffffff;">
+    <h2 style="margin-bottom: 30px; color: #004d40;">Últimas Noticias y Anuncios</h2>
+    <div class="news-container">
+      <div class="news-card">
+        <img src="https://source.unsplash.com/400x250/?animals,news" alt="Noticia 1" />
+        <h3>Título de la Noticia 1</h3>
+        <p>Ejemplo de descripción breve sobre la noticia reciente relacionada con el bienestar animal.</p>
+        <a href="#" class="btn">Leer más</a>
+      </div>
+      <div class="news-card">
+        <img src="https://source.unsplash.com/400x250/?animal,welfare" alt="Noticia 2" />
+        <h3>Título de la Noticia 2</h3>
+        <p>Resumen corto de un nuevo anuncio, descubrimiento o evento importante en la región.</p>
+        <a href="#" class="btn">Leer más</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>¿Tienes preguntas o deseas colaborar? Escríbenos a <a href="mailto:contacto@bienestaranimal.com.co">contacto@bienestaranimal.com.co</a>.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Bienestar Animal Latinoamérica. Todos los derechos reservados.</p>
+    <div class="social">
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleNav() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+
 </body>
 </html>
