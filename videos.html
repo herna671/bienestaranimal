@@ -4,107 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bienestar Animal Latinoamérica</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    /* NAVBAR */
-    nav {
-      background-color: #004d40;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav .logo {
-      color: white;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    .nav-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .nav-toggle span {
-      background: white;
-      height: 3px;
-      width: 25px;
-      margin: 4px 0;
-      transition: 0.3s;
-    }
-
-    ul.nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    ul.nav-links li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    ul.nav-links li a:hover {
-      color: #ffd600;
-    }
-
-    /* Footer */
-    .footer {
-      background: #004d40;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    .footer .social a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    .footer .social a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      .nav-toggle {
-        display: flex;
-      }
-
-      ul.nav-links {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-        margin-top: 15px;
-      }
-
-      ul.nav-links.active {
-        display: flex;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -117,13 +17,67 @@
       <span></span>
     </div>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#noticias">Noticias</a></li>
-      <li><a href="#investigacion">Investigación</a></li>
-      <li><a href="#podcast">Podcast</a></li>
-      <li><a href="#videos">Videos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href= "investigacion.html">Investigación</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
+
+  <!-- Content layout -->
+  <div class="content-wrapper">
+    <main class="main-content">
+      <section class="accordion">
+        <button class="accordion-header">Noticias</button>
+        <div class="accordion-content">
+          <article>
+            <h3>Nueva ley de bienestar animal</h3>
+            <p>En junio de 2025 se aprobó una ley histórica que protege a los animales de granja...</p>
+          </article>
+          <article>
+            <h3>Conferencia Internacional</h3>
+            <p>El Dr. Rick Hernández presentó su investigación sobre el estrés térmico en lechones...</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="accordion">
+        <button class="accordion-header">Investigación</button>
+        <div class="accordion-content">
+          <p>Explora nuestras últimas publicaciones científicas en bienestar animal, transporte y genética...</p>
+        </div>
+      </section>
+
+      <section class="accordion">
+        <button class="accordion-header">Podcast</button>
+        <div class="accordion-content">
+          <p>Escucha los episodios de "Veterinary Chronicles", donde hablamos sobre ética, salud y ciencia.</p>
+        </div>
+      </section>
+
+      <section class="accordion">
+        <button class="accordion-header">Videos</button>
+        <div class="accordion-content">
+          <p>Accede a nuestros videos educativos sobre cuidado animal, comportamiento y más.</p>
+        </div>
+      </section>
+
+      <section class="accordion">
+        <button class="accordion-header">Contacto</button>
+        <div class="accordion-content">
+          <p>¿Tienes preguntas o sugerencias? Escríbenos a <a href="mailto:contacto@bienestaranimal.org">contacto@bienestaranimal.org</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Publicidad</h3>
+      <a href="#"><img src="https://via.placeholder.com/250x150?text=Ad+1" alt="Ad 1"></a>
+      <a href="#"><img src="https://via.placeholder.com/250x150?text=Ad+2" alt="Ad 2"></a>
+    </aside>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -139,6 +93,17 @@
       const navLinks = document.getElementById("nav-links");
       navLinks.classList.toggle("active");
     }
+
+    // Accordion Functionality
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".accordion-header").forEach(button => {
+        button.addEventListener("click", () => {
+          button.classList.toggle("active");
+          const content = button.nextElementSibling;
+          content.style.display = content.style.display === "block" ? "none" : "block";
+        });
+      });
+    });
   </script>
 
 </body>
