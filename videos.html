@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bienestar Animal Latinoamérica</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #004d40;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    ul.nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    ul.nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    ul.nav-links li a:hover {
+      color: #ffd600;
+    }
+
+    /* Footer */
+    .footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .footer .social a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer .social a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+      }
+
+      ul.nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 15px;
+      }
+
+      ul.nav-links.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Bienestar Animal</div>
+    <div class="nav-toggle" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#noticias">Noticias</a></li>
+      <li><a href="#investigacion">Investigación</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Bienestar Animal Latinoamérica. Todos los derechos reservados.</p>
+    <div class="social">
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleNav() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

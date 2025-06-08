@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bienestar Animal Latinoamérica</title>
+  <link rel = "stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Bienestar Animal</div>
+    <div class="nav-toggle" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#noticias">Noticias</a></li>
+      <li><a href="#investigacion">Investigación</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Bienestar Animal Latinoamérica. Todos los derechos reservados.</p>
+    <div class="social">
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleNav() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
