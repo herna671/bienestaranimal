@@ -270,4 +270,9 @@ nav {
 
 /* Botón centrado ya usa la clase .btn.btn-primary */
 
+.testimonial-btn {
+  margin-top: 40px;
+  text-align: center;
+  display: block;
+}
 
