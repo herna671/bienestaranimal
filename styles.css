@@ -195,3 +195,79 @@ nav {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+
+
+/* Sección testimonials */
+.testimonials {
+  background-color: #020120; /* mismo color de fondo */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.testimonials .subheading {
+  margin-bottom: 40px;
+  font-size: 1.1em;
+  color: #ddd;
+}
+
+/* Contenedor de tarjetas testimonial */
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Tarjeta testimonial */
+.testimonial-card {
+  flex: 1 1 280px;   /* flexible, más ancha que alta */
+  max-width: 320px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 25px 20px;
+  background: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Foto circular */
+.testimonial-card .profile-pic img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Nombre y rol */
+.testimonial-card h3 {
+  margin: 5px 0 3px 0;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.testimonial-card .role {
+  margin-bottom: 15px;
+  font-size: 0.95em;
+  color: #ddd;
+}
+
+/* Review en cursiva */
+.testimonial-card .review {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Botón centrado ya usa la clase .btn.btn-primary */
+
+
