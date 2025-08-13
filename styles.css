@@ -276,3 +276,86 @@ nav {
   display: block;
 }
 
+
+/* Sección Contacto */
+.contact-section {
+  background-color: #020120; /* mismo color de fondo */
+  color: white;
+  padding: 60px 20px;
+}
+
+/* Contenedor de dos columnas */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;       /* para que sea responsive */
+  align-items: center;   /* centra verticalmente */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Lado izquierdo: texto */
+.contact-text {
+  flex: 1 1 300px;  /* flexible, mínimo 300px */
+}
+
+/* Lado derecho: imagen */
+.contact-image {
+  flex: 1 1 300px;  /* flexible, mínimo 300px */
+  display: flex;
+  justify-content: center;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 400px;  /* tamaño máximo de la imagen */
+  height: auto;
+  border-radius: 12px;  /* bordes redondeados opcional */
+  object-fit: cover;
+}
+
+/* Enlaces dentro de la sección */
+.contact-text a {
+  color: #1DE9B6;   /* color destacado para links */
+  text-decoration: none;
+}
+
+.contact-text a:hover {
+  text-decoration: underline;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #020120; /* mismo fondo oscuro */
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #333; /* línea sutil para separar */
+  font-size: 0.95em;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0 0 15px 0;
+}
+
+.footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* espacio entre enlaces */
+}
+
+.footer .social-link {
+  color: #1DE9B6; /* color destacado */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer .social-link:hover {
+  color: #00bfa5; /* cambio de color al pasar el mouse */
+}
