@@ -1,359 +1,197 @@
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
 
-    /* NAVBAR */
-    nav {
-      background-color: #004d40;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav .logo {
-      color: white;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    .nav-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .nav-toggle span {
-      background: white;
-      height: 3px;
-      width: 25px;
-      margin: 4px 0;
-      transition: 0.3s;
-    }
-
-    ul.nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    ul.nav-links li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    ul.nav-links li a:hover {
-      color: #ffd600;
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      overflow: hidden;
-    }
-
-    .hero video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-    .hero-content {
-      z-index: 1;
-      max-width: 90%;
-    }
-
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero-content p {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      background: #009688;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    /* Noticias Section */
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .news-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 0 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .news-card {
-      background: #f1f1f1;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-      text-align: left;
-      transition: transform 0.2s ease;
-    }
-
-    .news-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .news-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .news-card h3 {
-      margin: 15px;
-      color: #004d40;
-    }
-
-    .news-card p {
-      margin: 0 15px 15px;
-    }
-
-    .news-card .btn {
-      display: inline-block;
-      margin: 0 15px 20px;
-      background-color: #009688;
-      padding: 8px 15px;
-      font-size: 0.9rem;
-    }
-
-    /* Footer */
-    .footer {
-      background: #004d40;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    .footer .social a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    .footer .social a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      .nav-toggle {
-        display: flex;
-      }
-
-      ul.nav-links {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-        margin-top: 15px;
-      }
-
-      ul.nav-links.active {
-        display: flex;
-      }
-
-      .hero-content h1 {
-        font-size: 2rem;
-      }
-
-      .hero-content p {
-        font-size: 1rem;
-      }
-    }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.alegreya-sans-regular {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-/* NAVBAR */
+/* NAVBAR */ 
 nav {
-  background-color: #004d40;
-  padding: 15px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Logo a la izquierda, links a la derecha */
   align-items: center;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 30px 50px; /* Espaciado desde los bordes */
+  background-color: #051023;
+  position: relative; /* Necesario para menú absoluto en móvil */
 }
 
-nav .logo {
-  color: white;
+.logo {
   font-size: 1.5rem;
   font-weight: bold;
-  text-transform: uppercase;
+  color: #e4e2e2;
 }
 
+.nav-links {
+  list-style: none;
+  display: flex; /* Pone los <li> en línea */
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #e4e2e2;
+  padding: 8px 12px;          /* Espaciado para que el fondo se note */
+  border-radius: 8px;         /* Bordes redondeados */
+  transition: background-color 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(128, 128, 128, 0.2); /* Gris transparente */
+}
+
+/* Botón hamburguesa */
 .nav-toggle {
   display: none;
   flex-direction: column;
+  gap: 5px;
   cursor: pointer;
 }
 
 .nav-toggle span {
-  background: white;
-  height: 3px;
   width: 25px;
-  margin: 4px 0;
-  transition: 0.3s;
+  height: 3px;
+  background: #e4e2e2;
+  border-radius: 2px;
 }
 
-ul.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-ul.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-ul.nav-links li a:hover {
-  color: #ffd600;
-}
-
-/* Content layout */
-.content-wrapper {
-  display: flex;
-  padding: 20px;
-  gap: 20px;
-}
-
-.main-content {
-  flex: 3;
-  text-align: left;
-}
-
-.sidebar {
-  flex: 1;
-  background-color: #eeeeee;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.sidebar img {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-/* Accordion style */
-.accordion {
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #fff;
-}
-
-.accordion-header {
-  background-color: #e0f2f1;
-  padding: 15px;
-  cursor: pointer;
-  font-weight: bold;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-}
-
-.accordion-content {
-  padding: 15px;
-  display: none;
-}
-
-/* Footer */
-.footer {
-  background: #004d40;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-.footer .social a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.footer .social a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive styles */
+/* Responsive */
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #020120;
+    position: absolute;
+    top: 100%; /* Justo debajo del nav */
+    right: 0;
+    padding: 15px;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 200px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
   .nav-toggle {
     display: flex;
   }
+}
 
-  ul.nav-links {
-    flex-direction: column;
-    width: 100%;
-    display: none;
-    margin-top: 15px;
-  }
 
-  ul.nav-links.active {
-    display: flex;
-  }
+/* HERO SECTION */
 
-  .content-wrapper {
-    flex-direction: column;
-  }
+.hero {
+  background-color: #020120; /* mismo color que navbar */
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
 
-  .sidebar {
-    margin-top: 20px;
-  }
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #ccc;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #00944acb; /* morado */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #026d38cb;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Sección features */
+.features {
+  background-color: #020120; /* mismo color que tu página */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+/* Contenedor de tarjetas */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Cada tarjeta */
+.card {
+  flex: 1 1 220px;        /* flexible y responsiva */
+  max-width: 250px;
+  border: 1px solid #ccc; /* borde gris delgado */
+  border-radius: 12px;    /* bordes redondeados */
+  padding: 20px;
+  text-align: center;
+  background: none;        /* sin fondo */
+  transition: transform 0.2s, box-shadow 0.2s; /* efecto hover opcional */
+}
+
+/* Icono dentro de la tarjeta */
+.card .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* Título de tarjeta */
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+/* Párrafo de tarjeta */
+.card p {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* Efecto hover opcional */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
