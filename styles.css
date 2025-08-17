@@ -367,3 +367,9 @@ nav {
 .footer .social-link:hover {
   color: #00bfa5; /* cambio de color al pasar el mouse */
 }
+
+/*scroll suave navbar */
+
+html {
+  scroll-behavior: smooth;
+}
