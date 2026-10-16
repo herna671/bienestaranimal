@@ -3,10 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta etiquetas de indexación y SEO básico -->
     <title>Bienestar Animal Latinoamérica | Ciencia, Didáctica y Divulgación</title>
     <meta name="description" content="Plataforma académica y de divulgación abierta sobre bienestar animal, comportamiento, fisiología del estrés y microclimas ambiental.">
+    <meta name="keywords" content="Bienestar Animal, Medicina Veterinaria, Zootecnia, Fisiología del Estrés, Etología Aplicada, Ensayos Científicos, Nota Animal">
+    <meta name="author" content="Dr. Rick O. Hernández">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bienestaranimal.co/">
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bienestaranimal.co/">
+    <meta property="og:title" content="Bienestar Animal Latinoamérica | Ciencia, Didáctica y Divulgación">
+    <meta property="og:description" content="Plataforma académica y de divulgación abierta sobre bienestar animal, comportamiento, fisiología del estrés y microclimas ambiental.">
+    <meta property="og:image" content="https://bienestaranimal.co/assets/img/og-preview.jpg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bienestar Animal Latinoamérica">
+    <meta name="twitter:description" content="Ciencia, Didáctica Veterinaria y Ensayos Científicos sobre Bienestar Animal.">
+    <meta name="twitter:image" content="https://bienestaranimal.co/assets/img/og-preview.jpg">
+
+    <!-- Datos Estructurados JSON-LD (Optimizados para Google y LLMs) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://bienestaranimal.co/#organization",
+          "name": "Bienestar Animal Latinoamérica",
+          "url": "https://bienestaranimal.co/",
+          "description": "Plataforma de divulgación científica, didáctica veterinaria y ensayos técnicos sobre comportamiento y bienestar animal.",
+          "founder": {
+            "@type": "Person",
+            "name": "Dr. Rick O. Hernández",
+            "url": "https://herna671.github.io/"
+          },
+          "sameAs": [
+            "https://youtube.com/@NotaAnimal",
+            "https://instagram.com/theanimalnote",
+            "https://scholar.google.com/citations?user=GdVBdHgAAAAJ&hl=es",
+            "https://orcid.org/0000-0001-6066-6822",
+            "https://herna671.github.io/",
+            "https://www.linkedin.com/in/rickohernandez/",
+            "https://www.researchgate.net/profile/Rick-Hernandez-3?ev=hdr_xprf"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://bienestaranimal.co/#website",
+          "url": "https://bienestaranimal.co/",
+          "name": "Bienestar Animal LATAM",
+          "description": "Recursos didácticos y ensayos científicos sobre bienestar animal.",
+          "publisher": {
+            "@id": "https://bienestaranimal.co/#organization"
+          },
+          "inLanguage": "es"
+        }
+      ]
+    }
+    </script>
+    <script src="articulos.js"></script>
+    <!-- Tailwind CSS CDN con configuración personalizada -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -38,14 +98,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Marked.js for parsing Markdown files -->
+    <!-- Marked.js para interpretar archivos Markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-    <!-- Font Awesome for academic and social icons -->
+    <!-- Font Awesome para iconos académicos y redes sociales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!--Link To css file-->
-    <link rel="stylesheet" href="styles.css">
     
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="min-h-screen flex flex-col justify-between antialiased">
 
@@ -214,68 +274,96 @@
 
             </div>
 
-            <!-- COMMUNITY SECTION: Discord & YouTube Cards -->
-            <section class="mt-16 pt-10 border-t border-slate-200">
-                <div class="text-center max-w-2xl mx-auto mb-8">
-                    <span class="text-blue-600 font-semibold text-xs tracking-wider uppercase">Comunidad & Multimedia</span>
-                    <h2 class="text-2xl font-bold text-slate-900 mt-1">Conéctate y Aprende en Comunidad</h2>
-                    <p class="text-xs text-slate-600 mt-1">Únete a nuestros espacios interactivos para estudiantes, docentes y profesionales.</p>
-                </div>
+           <!-- COMMUNITY & MULTIMEDIA SECTION: Discord, YouTube & Instagram Cards -->
+<section class="mt-16 pt-10 border-t border-slate-200">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-blue-600 font-semibold text-xs tracking-wider uppercase">Comunidad & Multimedia</span>
+        <h2 class="text-2xl font-bold text-slate-900 mt-1">Conéctate y Aprende en Comunidad</h2>
+        <p class="text-xs text-slate-600 mt-1">Únete a nuestros espacios interactivos para estudiantes, profesionales y público en general.</p>
+    </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-                    <!-- Discord Card -->
-                    <div class="bg-white rounded-2xl border border-indigo-100 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
-                        <div class="absolute -right-6 -bottom-6 text-indigo-50/60 text-9xl group-hover:scale-105 transition-transform pointer-events-none">
-                            <i class="fa-brands fa-discord"></i>
-                        </div>
-                        <div class="space-y-4 relative z-10">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-2xl shadow-md">
-                                    <i class="fa-brands fa-discord"></i>
-                                </div>
-                                <div>
-                                    <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">100% Gratis</span>
-                                    <h3 class="font-bold text-slate-900 text-lg">Comunidad Discord para Estudiantes</h3>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                Un espacio abierto diseñado para estudiantes de Medicina Veterinaria y Zootecnia. Comparte dudas de casos clínicos, debate sobre bienestar animal, accede a libros digitalizados y colabora en proyectos.
-                            </p>
-                        </div>
-                        <div class="pt-6 relative z-10">
-                            <a href="https://discord.gg" target="_blank" class="inline-flex items-center justify-center w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2.5 rounded-lg transition-colors text-xs gap-2 shadow-sm">
-                                <i class="fa-brands fa-discord text-sm"></i> Únete a la Comunidad en Discord
-                            </a>
-                        </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        
+        <!-- Discord Card -->
+        <div class="bg-white rounded-2xl border border-indigo-100 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute -right-6 -bottom-6 text-indigo-50/60 text-9xl group-hover:scale-105 transition-transform pointer-events-none">
+                <i class="fa-brands fa-discord"></i>
+            </div>
+            <div class="space-y-4 relative z-10">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-brands fa-discord"></i>
                     </div>
-
-                    <!-- YouTube Card -->
-                    <div class="bg-white rounded-2xl border border-red-100 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
-                        <div class="absolute -right-6 -bottom-6 text-red-50/60 text-9xl group-hover:scale-105 transition-transform pointer-events-none">
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                        <div class="space-y-4 relative z-10">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center text-2xl shadow-md">
-                                    <i class="fa-brands fa-youtube"></i>
-                                </div>
-                                <div>
-                                    <span class="bg-red-100 text-red-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Canal Oficial</span>
-                                    <h3 class="font-bold text-slate-900 text-lg">Canal YouTube: Nota Animal</h3>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                Canal educativo con didáctica veterinaria, explicaciones de fisiología, análisis de artículos científicos en formato dinámico y guías sobre manejo etológico en especies de producción y compañía.
-                            </p>
-                        </div>
-                        <div class="pt-6 relative z-10">
-                            <a href="https://youtube.com/@NotaAnimal" target="_blank" class="inline-flex items-center justify-center w-full bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2.5 rounded-lg transition-colors text-xs gap-2 shadow-sm">
-                                <i class="fa-brands fa-youtube text-sm"></i> Visitar Canal Nota Animal
-                            </a>
-                        </div>
+                    <div>
+                        <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">100% Gratis</span>
+                        <h3 class="font-bold text-slate-900 text-lg">Comunidad Discord</h3>
                     </div>
                 </div>
-            </section>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    Un espacio abierto diseñado para estudiantes de Medicina Veterinaria y Zootecnia. Comparte dudas de casos clínicos, debate sobre bienestar animal, accede a libros digitalizados y colabora en proyectos.
+                </p>
+            </div>
+            <div class="pt-6 relative z-10">
+                <a href="https://discord.gg" target="_blank" class="inline-flex items-center justify-center w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2.5 rounded-lg transition-colors text-xs gap-2 shadow-sm">
+                    <i class="fa-brands fa-discord text-sm"></i> Únete en Discord
+                </a>
+            </div>
+        </div>
+
+        <!-- YouTube Card -->
+        <div class="bg-white rounded-2xl border border-red-100 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute -right-6 -bottom-6 text-red-50/60 text-9xl group-hover:scale-105 transition-transform pointer-events-none">
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="space-y-4 relative z-10">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <div>
+                        <span class="bg-red-100 text-red-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Canal Oficial</span>
+                        <h3 class="font-bold text-slate-900 text-lg">YouTube: Nota Animal</h3>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    Canal educativo con didáctica veterinaria, explicaciones de fisiología, análisis de artículos científicos en formato dinámico y guías sobre manejo etológico en especies de producción y compañía.
+                </p>
+            </div>
+            <div class="pt-6 relative z-10">
+                <a href="https://youtube.com/@NotaAnimal" target="_blank" class="inline-flex items-center justify-center w-full bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2.5 rounded-lg transition-colors text-xs gap-2 shadow-sm">
+                    <i class="fa-brands fa-youtube text-sm"></i> Visitar Nota Animal
+                </a>
+            </div>
+        </div>
+
+        <!-- Instagram Card -->
+        <div class="bg-white rounded-2xl border border-pink-100 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute -right-6 -bottom-6 text-pink-50/60 text-9xl group-hover:scale-105 transition-transform pointer-events-none">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="space-y-4 relative z-10">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div>
+                        <span class="bg-pink-100 text-pink-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Reels & Cortos</span>
+                        <h3 class="font-bold text-slate-900 text-lg">Instagram Oficial</h3>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    Contenido dinámico en video corto, cápsulas informativas sobre bienestar animal, resúmenes didácticos visuales e historias diarias con datos relevantes para el sector veterinario.
+                </p>
+            </div>
+            <div class="pt-6 relative z-10">
+                <a href="https://instagram.com/theanimalnote" target="_blank" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white font-semibold px-4 py-2.5 rounded-lg transition-colors text-xs gap-2 shadow-sm">
+                    <i class="fa-brands fa-instagram text-sm"></i> Síguenos en Instagram
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
         </main>
     </div>
 
@@ -435,129 +523,11 @@
     </footer>
 
     <!-- JavaScript Application State & Navigation Logic -->
+    <!-- 1. Enlazamos tu archivo externo de metadatos -->
+    <script src="articulos.js"></script>
+
+    <!-- 2. Lógica de Navegación y Carga de Markdown -->
     <script>
-        // Array of Obsidian Markdown (.md) Articles
-        const articlesData = [
-            {
-                id: "post-1",
-                category: "Didáctica",
-                date: "15 Oct 2026",
-                title: "Indicadores Fisiológicos de Estrés en Porcinos",
-                summary: "Revisión técnica de marcadores no invasivos como la temperatura ocular por infrarrojos, niveles de cortisol salival y variación de frecuencia cardíaca.",
-                badgeClass: "bg-emerald-100 text-emerald-800 border-emerald-200",
-                markdown: `
-# Indicadores Fisiológicos de Estrés en Porcinos
-
-*Autor: Dr. Rick O. Hernández | Publicado: 15 Octubre 2026*
-
-La evaluación objetiva del bienestar en porcinos requiere la combinación de **indicadores de comportamiento** e **indicadores fisiológicos**. En este artículo didáctico revisamos los parámetros más confiables y no invasivos para su aplicación en campo.
-
----
-
-### 1. Termografía Infrarroja (IRT) Ocular
-La medición de la temperatura del ojo a través de cámaras térmicas permite estimar cambios en el flujo sanguíneo causados por la activación del **eje Simpático-Adrenal-Medular (SAM)**.
-
-> **Regla de campo:** Un incremento abrupto de >0.8°C en la región orbital del ojo suele correlacionarse con respuestas de estrés agudo durante el manejo o transporte.
-
-### 2. Cortisol Salival
-A diferencia de las muestras de sangre, la recolección de saliva utilizando cuerdas de algodón no genera estrés adicional en los cerdos alojados en grupo.
-
-| Parámetro | Valor Basal Promedio | Estrés Agudo |
-| :--- | :--- | :--- |
-| **Cortisol Salival** | 1.2 - 2.5 ng/mL | > 6.0 ng/mL |
-| **Temperatura Ocular** | 36.5 °C | 37.8 °C |
-
-### Conclusión Didáctica
-El uso combinado de termografía y monitoreo conductual ofrece un diagnóstico preciso en menos de 5 minutos por lote.
-`
-            },
-            {
-                id: "post-2",
-                category: "Ensayos",
-                date: "10 Oct 2026",
-                title: "Modelado Matemático de Microclimas en Transporte Pequeño",
-                summary: "Análisis de gradientes térmicos y dinámica de ventilación en vehículos para transporte de pequeños rumiantes y porcinos en clima tropical.",
-                badgeClass: "bg-blue-100 text-blue-800 border-blue-200",
-                markdown: `
-# Modelado Matemático de Microclimas en Transporte Pequeño
-
-*Sección: Ensayos Científicos | Fecha: 10 Octubre 2026*
-
-El microclima interno en la caja de carga varía según la velocidad de desplazamiento, densidad y ventilación.
-
-### Ecuación de Balance Térmico
-$$Q_{total} = Q_{metabólico} + Q_{radiación} - Q_{ventilación}$$
-
-- **Calor Metabólico:** Producido por los animales.
-- **Ventilación:** Dependiente de orificios y velocidad.
-`
-            },
-            {
-                id: "post-3",
-                category: "Divulgación",
-                date: "02 Oct 2026",
-                title: "Guía Práctica de Bienestar para Pequeños Productores",
-                summary: "Acciones sencillas y de bajo costo para mejorar el confort térmico, el acceso al agua limpia y la sombra en hatos familiares.",
-                badgeClass: "bg-amber-100 text-amber-800 border-amber-200",
-                markdown: `
-# Guía Práctica de Bienestar para Pequeños Productores
-
-*Divulgación General | 02 Octubre 2026*
-
-Mejorar el bienestar no requiere grandes inversiones sino **atención al manejo**:
-
-1. **Agua Fresca:** Limpiar bebederos regularmente.
-2. **Sombra Efectiva:** Usar mallas o árboles locales.
-3. **Manejo Silencioso:** Usar banderas en lugar de palos.
-`
-            },
-            {
-                id: "post-4",
-                category: "Didáctica",
-                date: "20 Sep 2026",
-                title: "Evaluación Visual de Cojeras y Marcha en Aves",
-                summary: "Sistema de puntuación de cojeras (Gait Scoring) para la detección temprana de problemas podales y óseos en galpones.",
-                badgeClass: "bg-emerald-100 text-emerald-800 border-emerald-200",
-                markdown: `
-# Evaluación Visual de Cojeras (Gait Scoring) en Aves
-
-*Didáctica Veterinaria | 20 Septiembre 2026*
-
-Clasificación de capacidad de marcha de 0 a 5 para el monitoreo de cama y prevención de pododermatitis.
-`
-            },
-            {
-                id: "post-5",
-                category: "Ensayos",
-                date: "05 Sep 2026",
-                title: "Impacto del Enriquecimiento Ambiental en Cerdos de Engorde",
-                summary: "Estudio comparativo sobre objetos de manipulación, comportamiento estereotípico y lesiones cutáneas.",
-                badgeClass: "bg-blue-100 text-blue-800 border-blue-200",
-                markdown: `
-# Enriquecimiento Ambiental en Cerdos
-
-*Ensayos Científicos | 05 Septiembre 2026*
-
-Uso de cadenas, estacas de madera y paja para reducir conductas redirigidas y mordeduras de cola.
-`
-            },
-            {
-                id: "post-6",
-                category: "Divulgación",
-                date: "28 Ago 2026",
-                title: "Cinco Libertades vs. Dominación del Bienestar Animal",
-                summary: "Explicación sencilla de la evolución conceptual del bienestar animal desde las 5 libertades hacia el modelo de los 5 dominios.",
-                badgeClass: "bg-amber-100 text-amber-800 border-amber-200",
-                markdown: `
-# Evolución del Concepto de Bienestar Animal
-
-*Divulgación General | 28 Agosto 2026*
-
-Comprendiendo el impacto de los estados afectivos positivos en los animales.
-`
-            }
-        ];
-
         let currentCategoryFilter = "";
 
         // Single Page Router Logic
@@ -569,14 +539,11 @@ Comprendiendo el impacto de los estados afectivos positivos en los animales.
             document.querySelectorAll('.view-section').forEach(v => v.classList.add('hidden'));
 
             if (targetHash === 'didactica' || targetHash === 'ensayos' || targetHash === 'divulgacion') {
-                // Show Dedicated Category View
                 document.getElementById('view-category').classList.remove('hidden');
                 setupCategoryPage(targetHash);
             } else if (targetHash === 'recursos') {
-                // Show Dedicated Recursos View
                 document.getElementById('view-recursos').classList.remove('hidden');
             } else {
-                // Show Home View
                 document.getElementById('view-home').classList.remove('hidden');
                 renderHomeArticles();
             }
@@ -589,8 +556,7 @@ Comprendiendo el impacto de los estados afectivos positivos en los animales.
             const container = document.getElementById('home-articles-container');
             container.innerHTML = '';
 
-            // Take maximum 4 articles
-            const top4 = articlesData.slice(0, 4);
+            const top4 = articles.slice(0, 4); // Viene de articulos.js
 
             top4.forEach(article => {
                 container.innerHTML += createArticleCardHtml(article);
@@ -605,15 +571,15 @@ Comprendiendo el impacto de los estados afectivos positivos en los animales.
             if (categoryKey === 'didactica') {
                 catName = "Didáctica Veterinaria";
                 catDesc = "Material docente, guías clínicas e indicadores de evaluación práctica.";
-                currentCategoryFilter = "Didáctica";
+                currentCategoryFilter = "didactica";
             } else if (categoryKey === 'ensayos') {
                 catName = "Ensayos Científicos";
                 catDesc = "Modelado matemático, análisis técnico y publicaciones de investigación.";
-                currentCategoryFilter = "Ensayos";
+                currentCategoryFilter = "ensayos";
             } else if (categoryKey === 'divulgacion') {
                 catName = "Divulgación General";
                 catDesc = "Artículos accesibles para productores, tutores y público en general.";
-                currentCategoryFilter = "Divulgación";
+                currentCategoryFilter = "divulgacion";
             }
 
             document.getElementById('category-page-title').innerText = catName;
@@ -629,7 +595,7 @@ Comprendiendo el impacto de los estados afectivos positivos en los animales.
             const searchVal = document.getElementById('category-search').value.toLowerCase();
             container.innerHTML = '';
 
-            const filtered = articlesData.filter(item => {
+            const filtered = articles.filter(item => {
                 const matchesCat = item.category.toLowerCase() === currentCategoryFilter.toLowerCase();
                 const matchesSearch = item.title.toLowerCase().includes(searchVal) || item.summary.toLowerCase().includes(searchVal);
                 return matchesCat && matchesSearch;
@@ -656,12 +622,18 @@ Comprendiendo el impacto de los estados afectivos positivos en los animales.
 
         // Reusable HTML Template for Article Cards
         function createArticleCardHtml(article) {
+            // Asignar colores de badge según categoría
+            let badgeStyle = "bg-slate-100 text-slate-800 border-slate-200";
+            if (article.category === 'didactica') badgeStyle = "bg-emerald-100 text-emerald-800 border-emerald-200";
+            if (article.category === 'ensayos') badgeStyle = "bg-blue-100 text-blue-800 border-blue-200";
+            if (article.category === 'divulgacion') badgeStyle = "bg-amber-100 text-amber-800 border-amber-200";
+
             return `
                 <article class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div class="space-y-3">
                         <div class="flex items-center justify-between text-xs">
-                            <span class="px-2.5 py-0.5 rounded-full font-semibold border ${article.badgeClass}">
-                                ${article.category}
+                            <span class="px-2.5 py-0.5 rounded-full font-semibold border ${badgeStyle}">
+                                ${article.categoryLabel}
                             </span>
                             <span class="text-slate-400 font-medium">
                                 <i class="fa-regular fa-calendar-days mr-1"></i>${article.date}
@@ -688,17 +660,40 @@ Comprendiendo el impacto de los estados afectivos positivos en los animales.
             `;
         }
 
-        // Modal Functions
-        function openArticle(id) {
-            const article = articlesData.find(a => a.id === id);
+        // Modal Functions & Dynamic Markdown Fetching
+        async function openArticle(id) {
+            const article = articles.find(a => a.id === id);
             if (!article) return;
 
-            document.getElementById('modal-badge').innerText = article.category;
+            document.getElementById('modal-badge').innerText = article.categoryLabel;
             document.getElementById('modal-date').innerText = article.date;
-            document.getElementById('modal-content').innerHTML = marked.parse(article.markdown);
+            
+            // Mostrar estado de carga mientras descarga el archivo .md
+            document.getElementById('modal-content').innerHTML = `
+                <div class="py-12 text-center text-slate-400">
+                    <i class="fa-solid fa-spinner fa-spin text-2xl mb-2"></i>
+                    <p class="text-xs">Cargando documento Markdown...</p>
+                </div>
+            `;
             
             document.getElementById('markdown-modal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+
+            try {
+                // Descargar el archivo Markdown desde su ruta en la carpeta contenido/
+                const response = await fetch(article.file);
+                if (!response.ok) throw new Error('No se pudo encontrar el archivo .md');
+                
+                const markdownText = await response.text();
+                document.getElementById('modal-content').innerHTML = marked.parse(markdownText);
+            } catch (error) {
+                document.getElementById('modal-content').innerHTML = `
+                    <div class="p-4 bg-red-50 text-red-700 rounded-lg text-xs">
+                        <p class="font-bold mb-1">Error al cargar el archivo Markdown</p>
+                        <p>Verifica que el archivo exista en la ruta: <code>${article.file}</code></p>
+                    </div>
+                `;
+            }
         }
 
         function closeModal() {
@@ -710,7 +705,10 @@ Comprendiendo el impacto de los estados afectivos positivos en los animales.
             document.getElementById('mobile-menu').classList.toggle('hidden');
         }
 
-        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', toggleMobileMenu);
+        }
 
         function simulateDownload(filename) {
             const toast = document.getElementById('toast');
@@ -723,9 +721,12 @@ Comprendiendo el impacto de los estados afectivos positivos en los animales.
             if (e.key === 'Escape') closeModal();
         });
 
-        document.getElementById('markdown-modal').addEventListener('click', (e) => {
-            if (e.target.id === 'markdown-modal') closeModal();
-        });
+        const modalElement = document.getElementById('markdown-modal');
+        if (modalElement) {
+            modalElement.addEventListener('click', (e) => {
+                if (e.target.id === 'markdown-modal') closeModal();
+            });
+        }
 
         // Initialize Router on Load and Hash Change
         window.addEventListener('hashchange', () => {
