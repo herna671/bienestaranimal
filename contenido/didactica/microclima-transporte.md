@@ -1,10 +1,15 @@
-# Modelado Matemático de Microclimas en Transporte Pequeño
+# ¿Cómo mejorar el transporte de los animales?
 
 *Sección: Ensayos Científicos | Fecha: 10 Octubre 2026*
 
-ajo el nuevo cuerpo de conocimiento disponible, sabemos que las condiciones micrcolimaticas durante el transporte tienen un efecto importante en el bienestar animal. Sin embargo, surge una duda mas importante. que puede hacer un veterinario con esa información? 
-Para atacar esta duda debemos concentrarnos en tres puntos. Primero, entender de manera conceptual que es el microclima dentro del trailer/camión o transporte y como sus dimensiones fisicas varian. Segundo, es necesario comprender que efectos puede tener en los animales y tercero cuales son las posibilidades de intervencion o tratamiento que tienes como veterinario o zootecnista en el mundo real para reducir este impacto. 
-
+Bajo el cuerpo de conocimiento disponible, sabemos que las condiciones micrcolimaticas durante el transporte tienen un efecto negativo importante en el bienestar animal. 
+Sin embargo, el problema en la práctica, es que debido a su naturaleza como problema de investigación, esta informacion es muy especializada y técnica. Lo que nos deja con 
+un problema mucho mas serio. Profesionales y estudiantes tienen problemas para trasladar ese conocimiento a quienes mas lo necesitan.
+**¿Qué puede hacer un veterinario o profesional con esa información?** **¿Cómo puede utilizar esos datos para dar recomendaciones particulares que protejan el bienestar animal durante este evento crítico?** 
+</p>
+Para atacar esta duda debemos concentrarnos en tres puntos. ***Primero***, debemos entender de manera conceptual que es el microclima dentro del trailer/camión o transporte y como esperaremos que se comporte durante cada evento de transporte.
+***Segundo***, es necesario comprender a nivel fisiológico que efectos pueden producri distintos microclimas en los animales y ***tercero*** hay que entender cuales son las posibilidades de intervencion o tratamiento que tiene un veterinario o zootecnista en el mundo real para reducir este impacto. 
+</p>
 Empecemos entonces con la pregunta. Que es el microclima?. Las condiciones de temperatura, humedad relativa y punto de rocio que se presentan dentro del trailer de transporte de los animales van a determinar principalmente la capacidad del sistema para disipar la energia calorica que producen los animales. 
 Estas caracteristicas van a depender de muchos factores, pero los mas estudiados son los siguientes: 
 
