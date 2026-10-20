@@ -53,6 +53,15 @@ const articles = [
         title: "Cinco Libertades vs. Dominación del Bienestar Animal",
         summary: "Explicación sencilla de la evolución conceptual del bienestar animal desde las 5 libertades hacia el modelo de los 5 dominios.",
         file: "contenido/divulgacion/evolucion-bienestar-animal.md"
+    },
+        {
+        id: "post-7",
+        category: "didactica",
+        categoryLabel: "Didáctica",
+        date: "20 Oct 2026",
+        title: "Como mejorar el transporte animal",
+        summary: "Explicación sencilla de intervenciones que puede hacer un médico veterinario o zootecnista para mejorar el transporte animal en campo",
+        file: "contenido/didactica/microclima-transporte.md"
     }
 ];
 
